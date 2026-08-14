@@ -392,6 +392,31 @@ def md(title):
     return cell("markdown", title)
 
 
+DT_TAIL = '''# ============================================================
+# Decision tree visualization + feature importance
+# ============================================================
+from sklearn.tree import plot_tree
+
+# A fully-grown tree tends to overfit; visualize a pruned (max_depth=3) version
+dt_vis = DecisionTreeClassifier(max_depth=3, random_state=42)
+dt_vis.fit(X_train_sc, y_train)
+
+plt.figure(figsize=(16, 8))
+plot_tree(dt_vis, filled=True, rounded=True,
+          feature_names=feature_names,
+          class_names=["Malignant", "Benign"])
+plt.title("Decision Tree (max_depth=3)")
+plt.show()
+
+# feature importance (from the unpruned model)
+imp = pd.DataFrame({"feature": feature_names,
+                    "importance": model.feature_importances_}
+                   ).sort_values("importance", ascending=False)
+plt.figure(figsize=(8, 6))
+sns.barplot(data=imp.head(10), x="importance", y="feature", color="#9467bd")
+plt.title("Top 10 features by Decision Tree importance")
+plt.tight_layout(); plt.show()'''
+
 # --- define the 7 notebooks ---
 notebooks = {}
 
@@ -448,6 +473,18 @@ notebooks["06_Linear_Regression.ipynb"] = [
     md("# 🧬 Linear Regression — Diabetes Disease Progression\n"
        "Self-contained regression workflow on the UCI Diabetes dataset."),
     cell("code", LINEAR_REG_CODE),
+]
+
+notebooks["07_Decision_Tree.ipynb"] = [
+    md("# 🧬 Decision Tree — Breast Cancer Classification\n"
+       "Self-contained pipeline: load UCI data → scale → train → evaluate → "
+       "visualize the tree."),
+    cell("code", SHARED_SETUP),
+    cell("code", build_eval(
+        "Decision Tree",
+        "from sklearn.tree import DecisionTreeClassifier",
+        "DecisionTreeClassifier(random_state=42)")),
+    cell("code", DT_TAIL),
 ]
 
 # ---------------------------------------------------------------------------

@@ -17,6 +17,7 @@ A portfolio of classical and deep machine-learning models applied to **open-sour
 | 04 | `04_Random_Forest.ipynb` | Random Forest | Breast-cancer classification + feature importance |
 | 05 | `05_KMeans_Clustering.ipynb` | K-Means | Unsupervised cell grouping (elbow/silhouette + PCA) |
 | 06 | `06_Linear_Regression.ipynb` | Linear Regression | Diabetes disease progression (UCI) |
+| 07 | `07_Decision_Tree.ipynb` | Decision Tree | Breast-cancer classification + tree visualization |
 
 ### Deep Learning (PyTorch)
 | # | Notebook | Model | Task / Dataset |
@@ -67,9 +68,9 @@ All data is downloaded automatically on first run.
 
 ```
 machine-learning-models/
-├── 01_Logistic_Regression.ipynb ... 06_Linear_Regression.ipynb
+├── 01_Logistic_Regression.ipynb ... 07_Decision_Tree.ipynb
 ├── 08_CNN.ipynb, 09_RNN_LSTM.ipynb
-├── _gen_notebooks.py              # regenerates notebooks 01-06
+├── _gen_notebooks.py              # regenerates notebooks 01-07
 ├── _gen_notebooks_dl.py           # regenerates notebook 09
 ├── _gen_notebooks_microscope_hr.py# regenerates notebook 08
 └── .gitignore
