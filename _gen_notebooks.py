@@ -450,12 +450,6 @@ notebooks["06_Linear_Regression.ipynb"] = [
     cell("code", LINEAR_REG_CODE),
 ]
 
-notebooks["07_Model_Comparison.ipynb"] = [
-    md("# 🧬 Model Comparison — Cross-Validation & Test Summary\n"
-       "Compare all classifiers on the same pipeline."),
-    cell("code", COMPARE_CODE),
-]
-
 # ---------------------------------------------------------------------------
 # Write notebooks
 # ---------------------------------------------------------------------------
