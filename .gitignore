@@ -1,0 +1,15 @@
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Large data caches (do NOT push) ---
+data/
+medmnist/
+*.npz
+*.npy
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+
+# --- macOS ---
+.DS_Store
