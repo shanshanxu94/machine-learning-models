@@ -350,19 +350,10 @@ for i in range(8):
 
 notebooks = {}
 
-notebooks["08_CNN.ipynb"] = [
-    md("# 🧬 CNN — MNIST Image Classification (PyTorch)\n"
-       "Public database: **MNIST** (70k handwritten digits). The same "
-       "convolutional architecture transfers directly to cell/pathology image "
-       "classification."),
-    cell("code", CNN_CODE_1),
-    cell("code", CNN_CODE_2),
-    cell("code", CNN_CODE_3),
-    cell("code", CNN_CODE_4),
-    cell("code", CNN_CODE_5),
-]
+# NOTE: the microscope CNN lives in 08_CNN.ipynb (see _gen_notebooks_microscope_hr.py);
+# this script only generates the RNN notebook (renamed 07).
 
-notebooks["09_RNN_LSTM.ipynb"] = [
+notebooks["07_RNN_LSTM.ipynb"] = [
     md("# 🧬 RNN / LSTM — DNA Promoter Sequence Classification (PyTorch)\n"
        "Public database: **UCI Molecular Biology (Promoter Gene Sequences)** — "
        "106 E. coli promoter regions (57 bp). An LSTM reads the DNA sequence "
@@ -380,4 +371,4 @@ for fname, cells in notebooks.items():
         json.dump(make_notebook(cells), f, indent=1, ensure_ascii=False)
     print(f"Wrote {fname}")
 
-print("\nDone — CNN and RNN notebooks generated.")
+print("\nDone — RNN notebook generated.")
