@@ -1,4 +1,4 @@
-# 🧬 Machine Learning Models for Bioinformatics
+# Machine Learning Models for Practice
 
 A portfolio of classical and deep machine-learning models applied to **open-source biomedical datasets** — built for bioinformatics / data-science roles.
 
