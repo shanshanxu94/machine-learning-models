@@ -351,9 +351,9 @@ for i in range(8):
 notebooks = {}
 
 # NOTE: the microscope CNN lives in 08_CNN.ipynb (see _gen_notebooks_microscope_hr.py);
-# this script only generates the RNN notebook (renamed 07).
+# this script only generates the RNN notebook (09).
 
-notebooks["07_RNN_LSTM.ipynb"] = [
+notebooks["09_RNN_LSTM.ipynb"] = [
     md("# 🧬 RNN / LSTM — DNA Promoter Sequence Classification (PyTorch)\n"
        "Public database: **UCI Molecular Biology (Promoter Gene Sequences)** — "
        "106 E. coli promoter regions (57 bp). An LSTM reads the DNA sequence "
